@@ -32,15 +32,15 @@ cleanup:
 modules:
   # We need new Vala for Minder > 1.6 version
   - name: vala
-    cleanup-platform:
+    cleanup:
       - '*'
     config-opts:
       - --enable-unversioned
       - --enable-vapigen
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/vala/0.48/vala-0.48.6.tar.xz
-        sha256: d18d08ed030ce0e0f044f4c15c9df3c25b15beaf8700e45e43b736a6debf9707
+        url: https://download.gnome.org/sources/vala/0.48/vala-0.48.7.tar.xz
+        sha256: 28de33e28da24500cc1675c3a6ced1301c9a6a5e6dd06193569001f9ce9a5c53
 
   - name: discount
     buildsystem: simple
@@ -70,9 +70,7 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/phase1geo/Minder/archive/1.8.0.tar.gz
-        sha256: 0cfa00f75c1f43445965428abb450a6b279276a23e7346b6184ec24086b2aedb
+        url: https://github.com/phase1geo/Minder/archive/1.9.0.tar.gz
+        sha256: 33256914193327d7f5c7b8a11fbd86711863fb5f27200e5728d5449b55cd0d43
       - type: patch
         path: elementary-theme.patch
-      - type: patch
-        path: appdata-validation-fix.patch
