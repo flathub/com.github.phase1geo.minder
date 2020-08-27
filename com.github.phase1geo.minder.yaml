@@ -39,8 +39,8 @@ modules:
       - --enable-vapigen
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/vala/0.48/vala-0.48.8.tar.xz
-        sha256: c83a9b7292627bc259dae7cd414c813a48f285b4b2f4b574fa28e6af9a582ab4
+        url: https://download.gnome.org/sources/vala/0.48/vala-0.48.9.tar.xz
+        sha256: 9cea16d3bb3daddbfe0556b99fbfa08146230db7651e1e674cd08b4df5cefea9
 
   - name: discount
     buildsystem: simple
@@ -70,7 +70,7 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/phase1geo/Minder/archive/1.9.2.tar.gz
-        sha256: 24c030afcdf8070aa136adfe85d0767d1289ed093be415b1fc81c10154f84627
+        url: https://github.com/phase1geo/Minder/archive/1.10.0.tar.gz
+        sha256: e092af58497b678258eb6415e9d5b626a87645785fe987a9b2793671d032cc13
       - type: patch
         path: elementary-theme.patch
