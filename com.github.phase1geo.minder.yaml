@@ -8,8 +8,8 @@ command: com.github.phase1geo.minder
 finish-args:
   - --filesystem=xdg-documents
   - --share=ipc
-  - --socket=wayland
   - --socket=fallback-x11
+  - --socket=wayland
 cleanup:
   - '.la'
   - '*.a'
@@ -39,8 +39,8 @@ modules:
       - --enable-vapigen
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/vala/0.48/vala-0.48.9.tar.xz
-        sha256: 9cea16d3bb3daddbfe0556b99fbfa08146230db7651e1e674cd08b4df5cefea9
+        url: https://download.gnome.org/sources/vala/0.48/vala-0.48.10.tar.xz
+        sha256: 0b9f0a9621cbc216782cdf7f767374320c0acfc394243f989aabd9af4a7cfb41
 
   - name: discount
     buildsystem: simple
@@ -70,7 +70,7 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/phase1geo/Minder/archive/1.10.0.tar.gz
-        sha256: e092af58497b678258eb6415e9d5b626a87645785fe987a9b2793671d032cc13
+        url: https://github.com/phase1geo/Minder/archive/1.11.0.tar.gz
+        sha256: a88e3aff9702d9a6e0c0d7f4eb2cacd9c71aaf03bd13d8231c2a42784568e93b
       - type: patch
         path: elementary-theme.patch
