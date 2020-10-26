@@ -30,18 +30,6 @@ cleanup:
   - /share/valadoc
   - /share/valadoc-0.48
 modules:
-  # We need new Vala for Minder > 1.6 version
-  - name: vala
-    cleanup:
-      - '*'
-    config-opts:
-      - --enable-unversioned
-      - --enable-vapigen
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/vala/0.48/vala-0.48.11.tar.xz
-        sha256: 54fd1bb356d69824009691955c885bae357eec4eaced6c2e2d038180322e306a
-
   - name: discount
     buildsystem: simple
     build-commands:
