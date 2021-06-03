@@ -57,8 +57,9 @@ modules:
   - name: minder
     buildsystem: meson
     sources:
-      - type: archive
-        url: https://github.com/phase1geo/Minder/archive/1.12.3.tar.gz
-        sha256: 70cdf9d336424020c2e4ae37ac4a6062729a986450be406da1d35802ea4ada7a
+      - type: git
+        url: https://github.com/phase1geo/Minder.git
+        tag: 1.12.4
+        commit: 8bc26223c309cc60afa650ecfd3f57791d1516b0
       - type: patch
         path: elementary-theme.patch
