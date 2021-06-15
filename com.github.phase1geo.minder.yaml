@@ -58,7 +58,7 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/phase1geo/Minder/archive/1.12.4.tar.gz
-        sha256: 02f69cde491fc14ee54088005abd20ba6b39dca5c7b97dca72a9017cc081b0c2
+        url: https://github.com/phase1geo/Minder/archive/1.12.5.tar.gz
+        sha256: 1c984e5da32fb5614bbf9c2170badb00eea12a2c88f549248f803cc91e8cb581
       - type: patch
         path: elementary-theme.patch
