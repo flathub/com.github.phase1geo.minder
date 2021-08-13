@@ -45,20 +45,27 @@ modules:
         url: http://www.pell.portland.or.us/~orc/Code/discount/discount-2.2.6.tar.bz2
         sha256: ae68a4832ff8e620286304ec525c1fe8957be4d8f1e774588eb03d1c3deb74a7
 
-  - name: gtksourceview3
-    config-opts:
-      - --enable-gtk-doc=no
-      - --enable-introspection=yes
+  - name: gtksourceview4
+    buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz
-        sha256: 691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd
+        url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.0.tar.xz
+        sha256: 00a19121500cedf1bae97f35af865d839841fd785d9facf188498e13975b4e1a
+
+  - name: libhandy
+    buildsystem: meson
+    config-opts:
+      - -Dexamples=false
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/libhandy/1.2/libhandy-1.2.3.tar.xz
+        sha256: 92ec4a581ec1b41dd07a4e8faaf5d52ae37cabb7e1fa7f944d6cafbe596b6d61
 
   - name: minder
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/phase1geo/Minder/archive/1.12.5.tar.gz
-        sha256: 1c984e5da32fb5614bbf9c2170badb00eea12a2c88f549248f803cc91e8cb581
+        url: https://github.com/phase1geo/Minder/archive/1.13.1.tar.gz
+        sha256: f319501e40e53e7721864d73e8c071960acc40a4f32dd84e85646a2031be215a
       - type: patch
         path: elementary-theme.patch
