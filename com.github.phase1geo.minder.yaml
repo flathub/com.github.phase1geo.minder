@@ -55,7 +55,7 @@ modules:
   - name: libhandy
     buildsystem: meson
     config-opts:
-      - Dexamples=false
+      - -Dexamples=false
     sources:
       - type: archive
         url: https://download.gnome.org/sources/libhandy/1.2/libhandy-1.2.3.tar.xz
