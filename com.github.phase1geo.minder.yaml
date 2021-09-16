@@ -33,11 +33,12 @@ modules:
   - name: discount
     buildsystem: simple
     build-commands:
-      - ./configure.sh
-          --enable-all-features
-          --prefix=/app
-          --shared
-          --with-fenced-code
+      - >-
+        ./configure.sh
+        --enable-all-features
+        --prefix=/app
+        --shared
+        --with-fenced-code
       - sed -e 's|/sbin/ldconfig|/sbin/ldconfig -n|' -i librarian.sh
       - make install
     sources:
@@ -51,6 +52,12 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.0.tar.xz
         sha256: 00a19121500cedf1bae97f35af865d839841fd785d9facf188498e13975b4e1a
+        x-checker-data:
+          type: gnome
+          name: gtksourceview
+          versions:
+            <: 5.0.0
+          stable-only: true
 
   - name: libhandy
     buildsystem: meson
@@ -60,12 +67,23 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/libhandy/1.2/libhandy-1.2.3.tar.xz
         sha256: 92ec4a581ec1b41dd07a4e8faaf5d52ae37cabb7e1fa7f944d6cafbe596b6d61
+        x-checker-data:
+          type: gnome
+          name: libhandy
+          stable-only: true
 
   - name: minder
     buildsystem: meson
     sources:
-      - type: archive
-        url: https://github.com/phase1geo/Minder/archive/1.13.1.tar.gz
-        sha256: f319501e40e53e7721864d73e8c071960acc40a4f32dd84e85646a2031be215a
+      - type: git
+        url: https://github.com/phase1geo/Minder.git
+        tag: 1.13.1
+        commit: 4d54463cf0cebee8b431ef36c4cbe798a33ec192
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/phase1geo/Minder/releases/latest
+          tag-query: .tag_name
+          version-query: .tag_name
+          timestamp-query: .published_at
       - type: patch
         path: elementary-theme.patch
