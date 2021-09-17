@@ -11,7 +11,7 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
 cleanup:
-  - '.la'
+  - .la
   - '*.a'
   - /cache
   - /include
@@ -50,8 +50,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.0.tar.xz
-        sha256: 00a19121500cedf1bae97f35af865d839841fd785d9facf188498e13975b4e1a
+        url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.2.tar.xz
+        sha256: 842de7e5cb52000fd810e4be39cd9fe29ffa87477f15da85c18f7b82d45637cc
         x-checker-data:
           type: gnome
           name: gtksourceview
@@ -65,8 +65,8 @@ modules:
       - -Dexamples=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libhandy/1.2/libhandy-1.2.3.tar.xz
-        sha256: 92ec4a581ec1b41dd07a4e8faaf5d52ae37cabb7e1fa7f944d6cafbe596b6d61
+        url: https://download.gnome.org/sources/libhandy/1.4/libhandy-1.4.0.tar.xz
+        sha256: 2676d51fa1fa40fdee7497d3e763fefa18b0338bffcd2ee32e7f7e633c885446
         x-checker-data:
           type: gnome
           name: libhandy
