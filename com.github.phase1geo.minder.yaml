@@ -1,9 +1,9 @@
 id: com.github.phase1geo.minder
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
-runtime-version: '20.08'
+runtime-version: '21.08'
 base: io.elementary.BaseApp
-base-version: juno-20.08
+base-version: juno-21.08
 command: com.github.phase1geo.minder
 finish-args:
   - --filesystem=xdg-documents
