@@ -52,8 +52,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.2.tar.xz
-        sha256: 842de7e5cb52000fd810e4be39cd9fe29ffa87477f15da85c18f7b82d45637cc
+        url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.3.tar.xz
+        sha256: c30019506320ca2474d834cced1e2217ea533e00eb2a3f4eb7879007940ec682
         x-checker-data:
           type: gnome
           name: gtksourceview
@@ -67,8 +67,8 @@ modules:
       - -Dexamples=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libhandy/1.6/libhandy-1.6.0.tar.xz
-        sha256: b1a7d4288df05cb98d3434891f3e7beb46e880f38d49b28a8c4a21690e709c1c
+        url: https://download.gnome.org/sources/libhandy/1.6/libhandy-1.6.1.tar.xz
+        sha256: 6eab0384404d56bd1b1fa059d9a081177778f6ae080ffc2120f28656ca7462a4
         x-checker-data:
           type: gnome
           name: libhandy
