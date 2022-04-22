@@ -67,8 +67,8 @@ modules:
       - -Dexamples=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libhandy/1.6/libhandy-1.6.1.tar.xz
-        sha256: 6eab0384404d56bd1b1fa059d9a081177778f6ae080ffc2120f28656ca7462a4
+        url: https://download.gnome.org/sources/libhandy/1.6/libhandy-1.6.2.tar.xz
+        sha256: 7fa89aaa87966b6d0f5f4ef4d3efdaf654e2b01ea2c7ce2bd70301d1f9f42ca3
         x-checker-data:
           type: gnome
           name: libhandy
