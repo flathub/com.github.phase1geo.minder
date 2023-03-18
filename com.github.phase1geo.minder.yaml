@@ -79,13 +79,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/phase1geo/Minder.git
-        tag: 1.14.0
-        commit: 3301377ff575ff435f29846bfdd9f87ab5b8d8fc
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/phase1geo/Minder/releases/latest
-          tag-query: .tag_name
-          version-query: .tag_name
-          timestamp-query: .published_at
+        branch: master
+        commit: fbf808e5b2b3d4e907f77405c5d236cba279252c
       - type: patch
         path: elementary-theme.patch
