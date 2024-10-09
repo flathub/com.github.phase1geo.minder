@@ -89,3 +89,6 @@ modules:
           timestamp-query: .published_at
       - type: patch
         path: elementary-theme.patch
+      # https://github.com/phase1geo/Minder/issues/635
+      - type: patch
+        path: 7b09351b6e089611e6af6ae07ff3a58f2aa0c914.patch
