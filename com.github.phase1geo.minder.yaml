@@ -52,8 +52,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.4.tar.xz
-        sha256: 7ec9d18fb283d1f84a3a3eff3b7a72b09a10c9c006597b3fbabbb5958420a87d
+        url: https://download.gnome.org/sources/gtksourceview/4.99/gtksourceview-4.99.0.tar.xz
+        sha256: a2ae510d94a7fc3374f2f24d3f2ed9bd2bb89b1ad5605c974e2bec8d7ae951f7
         x-checker-data:
           type: gnome
           name: gtksourceview
@@ -79,8 +79,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/phase1geo/Minder.git
-        tag: 1.16.4
-        commit: 3acf33c060dde7b52c1ce50aa96a6ee955d706da
+        tag: 1.17.0
+        commit: 50af66e6cbff01b68fbf0560255d9f8a78f03d53
         x-checker-data:
           type: json
           url: https://api.github.com/repos/phase1geo/Minder/releases/latest
