@@ -1,5 +1,12 @@
 id: com.github.phase1geo.minder
 sdk: org.freedesktop.Sdk
+# based on https://github.com/flathub/org.gnome.Boxes/blob/master/org.gnome.Boxes.json
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.vala
+build-options:
+  prepend-path: /usr/lib/sdk/vala/bin
+  prepend-ld-library-path: /usr/lib/sdk/vala/lib
+  prepend-pkg-config-path: /usr/lib/sdk/vala/lib/pkgconfig/
 runtime: org.freedesktop.Platform
 runtime-version: '25.08'
 base: io.elementary.BaseApp
