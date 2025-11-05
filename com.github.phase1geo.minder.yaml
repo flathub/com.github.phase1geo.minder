@@ -1,9 +1,16 @@
 id: com.github.phase1geo.minder
 sdk: org.freedesktop.Sdk
+# based on https://github.com/flathub/org.gnome.Boxes/blob/master/org.gnome.Boxes.json
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.vala
+build-options:
+  prepend-path: /usr/lib/sdk/vala/bin
+  prepend-ld-library-path: /usr/lib/sdk/vala/lib
+  prepend-pkg-config-path: /usr/lib/sdk/vala/lib/pkgconfig/
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 base: io.elementary.BaseApp
-base-version: juno-23.08
+base-version: circe-25.08
 command: com.github.phase1geo.minder
 finish-args:
   - --device=dri
@@ -45,8 +52,8 @@ modules:
       - make install
     sources:
       - type: archive
-        url: https://www.pell.portland.or.us/~orc/Code/discount/discount-2.2.7b.tar.bz2
-        sha256: b9368cc2063831635f9e790d0c4c338c2b4b72658cdc244323241bfcddf6ffd5
+        url: https://www.pell.portland.or.us/~orc/Code/discount/discount-3.0.1.2.tar.bz2
+        sha256: ec670ca34fba6dd99cf30170b98f57fbd84ed51528cc3ae732b5ec298e738d9d
 
   - name: gtksourceview4
     buildsystem: meson
@@ -74,13 +81,26 @@ modules:
           name: libhandy
           stable-only: true
 
+  - name: gee
+    buildsystem: autotools
+    build-options:
+      cflags: -Wno-error=incompatible-pointer-types
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/libgee/0.20/libgee-0.20.8.tar.xz
+        sha256: 189815ac143d89867193b0c52b7dc31f3aa108a15f04d6b5dca2b6adfad0b0ee
+        x-checker-data:
+          type: gnome
+          name: libgee
+          stable-only: true
+
   - name: minder
     buildsystem: meson
     sources:
       - type: git
         url: https://github.com/phase1geo/Minder.git
-        tag: 1.16.4
-        commit: 3acf33c060dde7b52c1ce50aa96a6ee955d706da
+        tag: 1.17.0
+        commit: 50af66e6cbff01b68fbf0560255d9f8a78f03d53
         x-checker-data:
           type: json
           url: https://api.github.com/repos/phase1geo/Minder/releases/latest
@@ -89,6 +109,3 @@ modules:
           timestamp-query: .published_at
       - type: patch
         path: elementary-theme.patch
-      # https://github.com/phase1geo/Minder/issues/635
-      - type: patch
-        path: 7b09351b6e089611e6af6ae07ff3a58f2aa0c914.patch
