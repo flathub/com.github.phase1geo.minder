@@ -129,8 +129,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/phase1geo/Minder.git
-        tag: 2.0.5
-        commit: 7ab440f9a5dad46547d944822cd588b45ea054da
+        tag: 2.0.6
+        commit: 675d6aef10374041105d4553e1d00056cb318b1c
         x-checker-data:
           type: json
           url: https://api.github.com/repos/phase1geo/Minder/releases/latest
