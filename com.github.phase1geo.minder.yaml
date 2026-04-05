@@ -43,7 +43,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/GNOME/gtksourceview.git
-        tag: 5.12.0
+        tag: 5.15.0
 
   - name: sassc
     buildsystem: autotools
@@ -129,8 +129,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/phase1geo/Minder.git
-        tag: 2.0.7
-        commit: 12f7571f3ad541a0c6567af4839e927c8652325e
+        tag: 2.0.8
+        commit: f342bbba3f1fa2799e44865746d8d5f3a3bac739
         x-checker-data:
           type: json
           url: https://api.github.com/repos/phase1geo/Minder/releases/latest
